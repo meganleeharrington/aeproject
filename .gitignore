@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# dbt generated files
+dbt_packages/
+dbt_internal_packages/
+logs/
+target/
+
+# dbt credentials and local environment files
+profiles.yml
+.env.*

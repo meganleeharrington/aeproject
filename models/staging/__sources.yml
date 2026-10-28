@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: aeproject_raw
+    database: aeproject_db
+    schema: aeproject_schema
+    tables:
+      - name: tbd
