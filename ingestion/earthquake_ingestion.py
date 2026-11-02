@@ -243,7 +243,11 @@ def main():
     print("\nIngestion complete")
     print(f"Successful: {successful}")
     print(f"Failed: {failed}")
-
+    
+    if failed > 0:
+        raise RuntimeError(
+            f"Ingestion failed for {failed} earthquakes."
+        )
 
 if __name__ == "__main__":
     main()
