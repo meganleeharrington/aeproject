@@ -1,8 +1,13 @@
 version: 2
 
 sources:
-  - name: aeproject_raw
-    database: aeproject_db
-    schema: aeproject_schema
+  - name: usgs
+    database: AEPROJECT_DB
+    schema: RAW
+
     tables:
-      - name: tbd
+      - name: earthquake_events
+        identifier: EARTHQUAKE_EVENTS
+
+      - name: earthquake_quakeml
+        identifier: EARTHQUAKE_QUAKEML
