@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: int_quakeml_parsed
+    description: "One row per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: int_quakeml_amplitude
+    description: "One row per amplitude per earthquake."
+    columns:
+      - name: amplitude_id
+        data_tests:
+          - not_null
+      
+      - name: earthquake_id
+        data_tests:
+          - not_null
+
+    data_tests:
+          - dbt_utils.unique_combination_of_columns:
+              arguments:
+                combination_of_columns:
+                  - earthquake_id
+                  - amplitude_id
+
+  - name: int_quakeml_picks
+    description: "One row per seismic pick per earthquake."
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+
+      - name: pick_id
+        data_tests:
+          - not_null
+    
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - pick_id
+  
+  - name: int_station_magnitudes
+    description: "One row per station magnitude id"
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - station_magnitude_id
