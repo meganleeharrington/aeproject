@@ -27,7 +27,7 @@ models:
                   - earthquake_id
                   - amplitude_id
 
-  - name: int_quakeml_picks
+  - name: int_quakeml_pick
     description: "One row per seismic pick per earthquake."
     columns:
       - name: earthquake_id
@@ -45,11 +45,38 @@ models:
               - earthquake_id
               - pick_id
   
-  - name: int_station_magnitudes
+  - name: int_quakeml_station_magnitudes
     description: "One row per station magnitude id"
+    columns: 
+      - name: earthquake_id
+        data_tests:
+          - not_null
+      
+      - name: station_magnitude_id
+        data_tests:
+          - not_null
+          
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:
               - earthquake_id
               - station_magnitude_id
+  
+  - name: int_quakeml_origin
+    description: "One row per origin id per earthquake"
+    columns: 
+      - name: earthquake_id
+        data_tests:
+          - not_null
+      
+      - name: origin_id
+        data_tests:
+          - not_null
+    
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - origin_id

@@ -10,12 +10,10 @@ clean-targets:
   - "dbt_packages"
 
 models:
-
+  aeproject:
     staging:
       +materialized: view
-
     intermediate:
       +materialized: view 
-
     marts:
       +materialized: table
