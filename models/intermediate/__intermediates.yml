@@ -64,7 +64,7 @@ models:
               - station_magnitude_id
   
   - name: int_quakeml_origin
-    description: "One row per origin id per earthquake"
+    description: "One row per origin per earthquake"
     columns: 
       - name: earthquake_id
         data_tests:
@@ -80,3 +80,26 @@ models:
             combination_of_columns:
               - earthquake_id
               - origin_id
+    
+  - name: int_quakeml_arrival
+    description: "One row per arrival per origin per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+        
+      - name: origin_id
+        data_tests:
+          - not_null
+      
+      - name: arrival_id
+        data_tests:
+          - not_null
+      
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - origin_id
+              - arrival_id
