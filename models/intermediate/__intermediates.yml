@@ -129,3 +129,19 @@ models:
               - earthquake_id
               - city_rank
 
+  - name: int_quakeml_magnitude
+    description: "One row per magnitude estimate per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+      - name: magnitude_id
+        data_tests:
+          - not_null
+    
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - magnitude_id
