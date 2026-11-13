@@ -103,3 +103,11 @@ models:
               - earthquake_id
               - origin_id
               - arrival_id
+
+  - name: int_quakeml_event
+    description: "One row per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+          - unique
