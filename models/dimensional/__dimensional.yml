@@ -37,3 +37,14 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: fct_earthquake_origins
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+
+      - name: origin_id
+        data_tests:
+          - not_null
+          - unique
