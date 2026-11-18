@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_station
+    description: "One row per network-station"
+    columns: 
+      - name: station_key
+        data_tests:
+          - not_null
+          - unique
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - network_code
+              - station_code
+  
+  - name: fct_earthquake_events
+    description: "One row per earthquake"
+    columns:
+      - name: earthquake_id
+        tests:
+          - unique
+          - not_null
