@@ -39,12 +39,45 @@ models:
           - not_null
 
   - name: fct_earthquake_origins
+    description: "One row per origin per earthquake"
     columns:
       - name: earthquake_id
         data_tests:
           - not_null
-
       - name: origin_id
         data_tests:
           - not_null
           - unique
+
+  - name: fct_earthquake_magnitudes
+    description: "One row per magnitude per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+      - name: magnitude_id
+        data_tests:
+          - not_null
+          - unique
+  
+  - name: fct_station_magnitudes
+    description: "One row per station magnitude per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+      - name: station_magnitude_id
+        data_tests:
+          - not_null
+      - name: station_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_station')
+                field: station_key
+    data_tests:
+        - dbt_utils.unique_combination_of_columns:
+            arguments:
+              combination_of_columns:
+                - earthquake_id
+                - station_magnitude_id
