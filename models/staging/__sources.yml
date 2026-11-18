@@ -11,3 +11,6 @@ sources:
 
       - name: earthquake_quakeml
         identifier: EARTHQUAKE_QUAKEML
+
+      - name: earthquake_geographic_enrichment
+        identifier: EARTHQUAKE_GEOGRAPHIC_ENRICHMENT
