@@ -22,3 +22,18 @@ models:
         tests:
           - unique
           - not_null
+      - name: flinn_engdahl_region_number
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_seismic_region')
+                field: flinn_engdahl_region_number
+
+  - name: dim_seismic_region
+    description: "One row per Flinn-Engdahl region"
+    columns:
+      - name: flinn_engdahl_region_number
+        tests:
+          - unique
+          - not_null
