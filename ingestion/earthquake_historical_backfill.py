@@ -3,6 +3,28 @@ import os
 import snowflake.connector
 import json
 from datetime import datetime, timedelta
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+def create_retry_session():
+    session = requests.Session()
+
+    retry_strategy = Retry(
+        total=5,
+        backoff_factor=2,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+        respect_retry_after_header=True
+    )
+
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+
+    session.mount("https://", adapter)
+
+    return session
+
+
+session = create_retry_session()
 
 def fetch_earthquakes(start_time, end_time):
     url = "https://earthquake.usgs.gov/fdsnws/event/1/query"
@@ -15,7 +37,7 @@ def fetch_earthquakes(start_time, end_time):
         "orderby": "time"
     }
 
-    response = requests.get(url, params=params, timeout=120)
+    response = session.get(url, params=params, timeout=120)
     response.raise_for_status()
 
     return response.json()
@@ -29,7 +51,7 @@ def fetch_earthquake_count(start_time, end_time):
         "eventtype": "earthquake"
     }
 
-    response = requests.get(url, params=params, timeout=120)
+    response = session.get(url, params=params, timeout=120)
     response.raise_for_status()
 
     return int(response.text.strip())
@@ -37,7 +59,7 @@ def fetch_earthquake_count(start_time, end_time):
 def fetch_earthquake_details(earthquake):
     detail_url = earthquake["properties"]["detail"]
 
-    response = requests.get(detail_url, timeout=30)
+    response = session.get(detail_url, timeout=30)
     response.raise_for_status()
 
     return response.json()
@@ -58,7 +80,7 @@ def fetch_quakeml(earthquake_details):
     if not quakeml_file:
         return None
 
-    response = requests.get(quakeml_file["url"], timeout=30)
+    response = session.get(quakeml_file["url"], timeout=30)
     response.raise_for_status()
 
     return response.text
