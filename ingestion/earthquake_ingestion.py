@@ -4,13 +4,12 @@ import snowflake.connector
 import json
 from datetime import datetime, timedelta, timezone
 
-def fetch_earthquakes(updated_after, min_magnitude=4.5):
+def fetch_earthquakes(updated_after):
     url = "https://earthquake.usgs.gov/fdsnws/event/1/query"
 
     params = {
         "format": "geojson",
         "updatedafter": updated_after.isoformat(),
-        "minmagnitude": min_magnitude,
         "orderby": "time",
         "eventtype": "earthquake"
     }
