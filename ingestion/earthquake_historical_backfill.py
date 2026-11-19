@@ -132,6 +132,33 @@ def mark_batch_complete(connection, batch_start, batch_end, earthquake_count):
         f"Completed batch {batch_start} to {batch_end}: "
         f"{earthquake_count} earthquakes"
     )
+def get_existing_earthquake_ids(connection, earthquake_ids):
+    if not earthquake_ids:
+        return set(), set()
+
+    placeholders = ", ".join(["%s"] * len(earthquake_ids))
+
+    events_query = f"""
+        SELECT EARTHQUAKE_ID
+        FROM RAW.EARTHQUAKE_EVENTS
+        WHERE EARTHQUAKE_ID IN ({placeholders})
+    """
+
+    quakeml_query = f"""
+        SELECT EARTHQUAKE_ID
+        FROM RAW.EARTHQUAKE_QUAKEML
+        WHERE EARTHQUAKE_ID IN ({placeholders})
+    """
+
+    with connection.cursor() as cursor:
+        cursor.execute(events_query, earthquake_ids)
+        existing_events = {row[0] for row in cursor.fetchall()}
+
+        cursor.execute(quakeml_query, earthquake_ids)
+        existing_quakeml = {row[0] for row in cursor.fetchall()}
+
+    return existing_events, existing_quakeml
+
 
 def process_batch(connection, batch_start, batch_end):
 
@@ -140,6 +167,20 @@ def process_batch(connection, batch_start, batch_end):
         print(f"Skipping completed batch: {batch_start}")
         return
 
+    # Check the expected number of earthquakes 
+    expected_count = fetch_earthquake_count(
+        batch_start.isoformat(),
+        batch_end.isoformat()
+    )
+
+    # Prevent processing batches that exceed the USGS API limit
+    if expected_count > 20000:
+        raise ValueError(
+            f"Batch {batch_start} contains {expected_count} earthquakes, "
+            "exceeding the USGS API limit of 20,000. "
+            "Split this batch into smaller date ranges."
+        )
+
     # Retrieve earthquakes for the date range
     earthquakes = fetch_earthquakes(
         batch_start.isoformat(),
@@ -147,11 +188,6 @@ def process_batch(connection, batch_start, batch_end):
     )
 
     features = earthquakes["features"]
-
-    expected_count = fetch_earthquake_count(
-        batch_start.isoformat(),
-        batch_end.isoformat()
-    )
 
     if len(features) != expected_count:
         raise ValueError(
@@ -164,8 +200,25 @@ def process_batch(connection, batch_start, batch_end):
         f"from {batch_start} to {batch_end}"
     )
 
-    # Retrieve and load each earthquake
+    # Retrieve existing earthquake IDs from Snowflake in two queries
+    earthquake_ids = [earthquake["id"] for earthquake in features]
+
+    existing_events, existing_quakeml = get_existing_earthquake_ids(
+        connection,
+        earthquake_ids
+    )
+
+    # Retrieve and load earthquakes that are not already fully stored
     for earthquake in features:
+        earthquake_id = earthquake["id"]
+
+        if (
+            earthquake_id in existing_events
+            and earthquake_id in existing_quakeml
+        ):
+            print(f"Skipping existing earthquake {earthquake_id}")
+            continue
+
         details = fetch_earthquake_details(earthquake)
         quakeml = fetch_quakeml(details)
 
