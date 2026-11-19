@@ -12,5 +12,18 @@ sources:
       - name: earthquake_quakeml
         identifier: EARTHQUAKE_QUAKEML
 
+  - name: geo
+    database: AEPROJECT_DB
+    schema: RAW 
+    
+    tables:
       - name: earthquake_geographic_enrichment
         identifier: EARTHQUAKE_GEOGRAPHIC_ENRICHMENT
+  
+  - name: census
+    database: AEPROJECT_DB
+    schema: RAW 
+
+    tables:
+      - name: county_boundaries
+        identifier: COUNTY_BOUNDARIES

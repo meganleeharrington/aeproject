@@ -81,3 +81,11 @@ models:
               combination_of_columns:
                 - earthquake_id
                 - station_magnitude_id
+
+  - name: dim_plant
+    description: "One row per power plant"
+    columns:
+      - name: plant_id
+        data_tests:
+          - not_null
+          - unique

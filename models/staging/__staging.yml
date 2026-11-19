@@ -8,3 +8,38 @@ models:
         data_tests:
           - not_null
           - unique
+  
+  - name: stg_county_boundaries
+    description: "One row per county"
+    columns:
+      - name: county_fips
+        data_tests:
+          - unique
+          - not_null
+      - name: county_geometry
+        data_tests:
+          - not_null
+
+  - name: stg_eia_plants
+    description: "One row per plant from EIA-860 2025"
+    columns:
+      - name: plant_code
+        description: "Identifier for each power plant"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_eia_generators
+    description: "One row per generator from EIA-860 2025"
+    columns:
+      - name: plant_code
+        description: "Identifier of the plant associated with generator"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_eia_plants')
+                field: plant_code
+      - name: generator_id
+        data_tests:
+          - not_null
