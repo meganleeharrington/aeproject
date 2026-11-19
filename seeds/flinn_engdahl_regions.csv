@@ -1,0 +1,757 @@
+﻿seismic_region_number,seismic_region_name,flinn_engdahl_region_number,flinn_engdahl_region_description
+1,Alaska - Aleutian Arc,1,CENTRAL ALASKA
+1,Alaska - Aleutian Arc,2,SOUTHERN ALASKA
+1,Alaska - Aleutian Arc,3,BERING SEA
+1,Alaska - Aleutian Arc,4,KOMANDORSKY ISLANDS REGION
+1,Alaska - Aleutian Arc,5,"NEAR ISLANDS, ALEUTIAN ISLANDS"
+1,Alaska - Aleutian Arc,6,"RAT ISLANDS, ALEUTIAN ISLANDS"
+1,Alaska - Aleutian Arc,7,"ANDREANOF ISLANDS, ALEUTIAN IS."
+1,Alaska - Aleutian Arc,8,"PRIBILOF ISLANDS, ALASKA REGION"
+1,Alaska - Aleutian Arc,9,"FOX ISLANDS, ALEUTIAN ISLANDS"
+1,Alaska - Aleutian Arc,10,"UNIMAK ISLAND REGION, ALASKA"
+1,Alaska - Aleutian Arc,11,BRISTOL BAY
+1,Alaska - Aleutian Arc,12,ALASKA PENINSULA
+1,Alaska - Aleutian Arc,13,"KODIAK ISLAND REGION, ALASKA"
+1,Alaska - Aleutian Arc,14,"KENAI PENINSULA, ALASKA"
+1,Alaska - Aleutian Arc,15,GULF OF ALASKA
+1,Alaska - Aleutian Arc,16,SOUTH OF ALEUTIAN ISLANDS
+1,Alaska - Aleutian Arc,17,SOUTH OF ALASKA
+2,Southeastern Alaska to Washington,18,"SOUTHERN YUKON TERRITORY, CANADA"
+2,Southeastern Alaska to Washington,19,SOUTHEASTERN ALASKA
+2,Southeastern Alaska to Washington,20,OFF COAST OF SOUTHEASTERN ALASKA
+2,Southeastern Alaska to Washington,21,WEST OF VANCOUVER ISLAND
+2,Southeastern Alaska to Washington,22,QUEEN CHARLOTTE ISLANDS REGION
+2,Southeastern Alaska to Washington,23,"BRITISH COLUMBIA, CANADA"
+2,Southeastern Alaska to Washington,24,"ALBERTA, CANADA"
+2,Southeastern Alaska to Washington,25,"VANCOUVER ISLAND, CANADA REGION"
+2,Southeastern Alaska to Washington,26,OFF COAST OF WASHINGTON
+2,Southeastern Alaska to Washington,27,NEAR COAST OF WASHINGTON
+2,Southeastern Alaska to Washington,28,WASHINGTON-OREGON BORDER REGION
+2,Southeastern Alaska to Washington,29,WASHINGTON
+3,"Oregon, California and Nevada",30,OFF COAST OF OREGON
+3,"Oregon, California and Nevada",31,NEAR COAST OF OREGON
+3,"Oregon, California and Nevada",32,OREGON
+3,"Oregon, California and Nevada",33,WESTERN IDAHO
+3,"Oregon, California and Nevada",34,OFF COAST OF NORTHERN CALIFORNIA
+3,"Oregon, California and Nevada",35,NEAR COAST OF NORTHERN CALIF.
+3,"Oregon, California and Nevada",36,NORTHERN CALIFORNIA
+3,"Oregon, California and Nevada",37,NEVADA
+3,"Oregon, California and Nevada",38,OFF COAST OF CALIFORNIA
+3,"Oregon, California and Nevada",39,CENTRAL CALIFORNIA
+3,"Oregon, California and Nevada",40,CALIFORNIA-NEVADA BORDER REGION
+3,"Oregon, California and Nevada",41,SOUTHERN NEVADA
+3,"Oregon, California and Nevada",42,WESTERN ARIZONA
+3,"Oregon, California and Nevada",43,SOUTHERN CALIFORNIA
+3,"Oregon, California and Nevada",44,CALIFORNIA-ARIZONA BORDER REGION
+3,"Oregon, California and Nevada",45,CALIF.-BAJA CALIF. BORDER REGION
+3,"Oregon, California and Nevada",46,W. ARIZONA-SONORA BORDER REGION
+4,Baja California and Gulf of California,47,OFF W. COAST OF BAJA CALIFORNIA
+4,Baja California and Gulf of California,48,"BAJA CALIFORNIA, MEXICO"
+4,Baja California and Gulf of California,49,GULF OF CALIFORNIA
+4,Baja California and Gulf of California,50,"SONORA, MEXICO"
+4,Baja California and Gulf of California,51,OFF COAST OF CENTRAL MEXICO
+4,Baja California and Gulf of California,52,NEAR COAST OF CENTRAL MEXICO
+5,Mexico - Guatemala Area,53,REVILLA GIGEDO ISLANDS REGION
+5,Mexico - Guatemala Area,54,"OFF COAST OF JALISCO, MEXICO"
+5,Mexico - Guatemala Area,55,"NEAR COAST OF JALISCO, MEXICO"
+5,Mexico - Guatemala Area,56,"NEAR COAST OF MICHOACAN, MEXICO"
+5,Mexico - Guatemala Area,57,"MICHOACAN, MEXICO"
+5,Mexico - Guatemala Area,58,"NEAR COAST OF GUERRERO, MEXICO"
+5,Mexico - Guatemala Area,59,"GUERRERO, MEXICO"
+5,Mexico - Guatemala Area,60,"OAXACA, MEXICO"
+5,Mexico - Guatemala Area,61,"CHIAPAS, MEXICO"
+5,Mexico - Guatemala Area,62,MEXICO-GUATEMALA BORDER REGION
+5,Mexico - Guatemala Area,63,OFF COAST OF MEXICO
+5,Mexico - Guatemala Area,64,"OFF COAST OF MICHOACAN, MEXICO"
+5,Mexico - Guatemala Area,65,"OFF COAST OF GUERRERO, MEXICO"
+5,Mexico - Guatemala Area,66,"NEAR COAST OF OAXACA, MEXICO"
+5,Mexico - Guatemala Area,67,"OFF COAST OF OAXACA, MEXICO"
+5,Mexico - Guatemala Area,68,"OFF COAST OF CHIAPAS, MEXICO"
+5,Mexico - Guatemala Area,69,"NEAR COAST OF CHIAPAS, MEXICO"
+5,Mexico - Guatemala Area,70,GUATEMALA
+5,Mexico - Guatemala Area,71,NEAR COAST OF GUATEMALA
+5,Mexico - Guatemala Area,730,NORTHERN EAST PACFIC RISE
+6,Central America,72,HONDURAS
+6,Central America,73,EL SALVADOR
+6,Central America,74,NEAR COAST OF NICARAGUA
+6,Central America,75,NICARAGUA
+6,Central America,76,OFF COAST OF CENTRAL AMERICA
+6,Central America,77,OFF COAST OF COSTA RICA
+6,Central America,78,COSTA RICA
+6,Central America,79,NORTH OF PANAMA
+6,Central America,80,PANAMA-COSTA RICA BORDER REGION
+6,Central America,81,PANAMA
+6,Central America,82,PANAMA-COLOMBIA BORDER REGION
+6,Central America,83,SOUTH OF PANAMA
+7,Caribbean Loop,84,"YUCATAN PENINSULA, MEXICO"
+7,Caribbean Loop,85,CUBA REGION
+7,Caribbean Loop,86,JAMAICA REGION
+7,Caribbean Loop,87,HAITI REGION
+7,Caribbean Loop,88,DOMINICAN REPUBLIC REGION
+7,Caribbean Loop,89,MONA PASSAGE
+7,Caribbean Loop,90,PUERTO RICO REGION
+7,Caribbean Loop,91,VIRGIN ISLANDS
+7,Caribbean Loop,92,LEEWARD ISLANDS
+7,Caribbean Loop,93,BELIZE
+7,Caribbean Loop,94,CARIBBEAN SEA
+7,Caribbean Loop,95,WINDWARD ISLANDS
+7,Caribbean Loop,96,NEAR NORTH COAST OF COLOMBIA
+7,Caribbean Loop,97,NEAR COAST OF VENEZUELA
+7,Caribbean Loop,98,TRINIDAD
+7,Caribbean Loop,99,NORTHERN COLOMBIA
+7,Caribbean Loop,100,"LAKE MARACAIBO, VENEZUELA"
+7,Caribbean Loop,101,VENEZUELA
+7,Caribbean Loop,731,NORTH OF HONDURAS
+8,Andean South America,102,NEAR WEST COAST OF COLOMBIA
+8,Andean South America,103,COLOMBIA
+8,Andean South America,104,OFF COAST OF ECUADOR
+8,Andean South America,105,NEAR COAST OF ECUADOR
+8,Andean South America,106,COLOMBIA-ECUADOR BORDER REGION
+8,Andean South America,107,ECUADOR
+8,Andean South America,108,OFF COAST OF NORTHERN PERU
+8,Andean South America,109,NEAR COAST OF NORTHERN PERU
+8,Andean South America,110,PERU-ECUADOR BORDER REGION
+8,Andean South America,111,NORTHERN PERU
+8,Andean South America,112,PERU-BRAZIL BORDER REGION
+8,Andean South America,113,WESTERN BRAZIL
+8,Andean South America,114,OFF COAST OF PERU
+8,Andean South America,115,NEAR COAST OF PERU
+8,Andean South America,116,CENTRAL PERU
+8,Andean South America,117,SOUTHERN PERU
+8,Andean South America,118,PERU-BOLIVIA BORDER REGION
+8,Andean South America,119,NORTHERN BOLIVIA
+8,Andean South America,120,CENTRAL BOLIVIA
+8,Andean South America,121,OFF COAST OF NORTHERN CHILE
+8,Andean South America,122,NEAR COAST OF NORTHERN CHILE
+8,Andean South America,123,NORTHERN CHILE
+8,Andean South America,124,CHILE-BOLIVIA BORDER REGION
+8,Andean South America,125,SOUTHERN BOLIVIA
+8,Andean South America,126,PARAGUAY
+8,Andean South America,127,CHILE-ARGENTINA BORDER REGION
+8,Andean South America,128,"JUJUY PROVINCE, ARGENTINA"
+8,Andean South America,129,"SALTA PROVINCE, ARGENTINA"
+8,Andean South America,130,"CATAMARCA PROVINCE, ARGENTINA"
+8,Andean South America,131,"TUCUMAN PROVINCE, ARGENTINA"
+8,Andean South America,132,"SANTIAGO DEL ESTERO PROV., ARG."
+8,Andean South America,133,NORTHEASTERN ARGENTINA
+8,Andean South America,134,OFF COAST OF CENTRAL CHILE
+8,Andean South America,135,NEAR COAST OF CENTRAL CHILE
+8,Andean South America,136,CENTRAL CHILE
+8,Andean South America,137,"SAN JUAN PROVINCE, ARGENTINA"
+8,Andean South America,138,"LA RIOJA PROVINCE, ARGENTINA"
+8,Andean South America,139,"MENDOZA PROVINCE, ARGENTINA"
+8,Andean South America,140,"SAN LUIS PROVINCE, ARGENTINA"
+8,Andean South America,141,"CORDOBA PROVINCE, ARGENTINA"
+8,Andean South America,142,URUGUAY
+9,Extreme South America,143,OFF COAST OF SOUTHERN CHILE
+9,Extreme South America,144,SOUTHERN CHILE
+9,Extreme South America,145,S. CHILE-ARGENTINA BORDER REGION
+9,Extreme South America,146,SOUTHERN ARGENTINA
+10,Southern Antilles,147,TIERRA DEL FUEGO
+10,Southern Antilles,148,FALKLAND ISLANDS REGION
+10,Southern Antilles,149,DRAKE PASSAGE
+10,Southern Antilles,150,SCOTIA SEA
+10,Southern Antilles,151,SOUTH GEORGIA ISLAND REGION
+10,Southern Antilles,152,SOUTH GEORGIA RISE
+10,Southern Antilles,153,SOUTH SANDWICH ISLANDS REGION
+10,Southern Antilles,154,SOUTH SHETLAND ISLANDS
+10,Southern Antilles,155,ANTARCTIC PENINSULA
+10,Southern Antilles,156,SOUTHWESTERN ATLANTIC OCEAN
+10,Southern Antilles,157,WEDDELL SEA
+10,Southern Antilles,732,EAST OF SOUTH SANDWICH ISLANDS
+11,New Zealand Region,158,"OFF W. COAST OF N. ISLAND, N.Z."
+11,New Zealand Region,159,"NORTH ISLAND, NEW ZEALAND"
+11,New Zealand Region,160,"OFF E. COAST OF N. ISLAND, N.Z."
+11,New Zealand Region,161,"OFF W. COAST OF S. ISLAND, N.Z."
+11,New Zealand Region,162,"SOUTH ISLAND, NEW ZEALAND"
+11,New Zealand Region,163,"COOK STRAIT, NEW ZEALAND"
+11,New Zealand Region,164,"OFF E. COAST OF S. ISLAND, N.Z."
+11,New Zealand Region,165,NORTH OF MACQUARIE ISLAND
+11,New Zealand Region,166,"AUCKLAND ISLANDS, N.Z. REGION"
+11,New Zealand Region,167,MACQUARIE ISLAND REGION
+11,New Zealand Region,168,SOUTH OF NEW ZEALAND
+12,Kermadec - Tonga - Samoa Basin Area,169,SAMOA ISLANDS REGION
+12,Kermadec - Tonga - Samoa Basin Area,170,SAMOA ISLANDS
+12,Kermadec - Tonga - Samoa Basin Area,171,SOUTH OF FIJI ISLANDS
+12,Kermadec - Tonga - Samoa Basin Area,172,WEST OF TONGA ISLANDS (NOT IN USE)
+12,Kermadec - Tonga - Samoa Basin Area,173,TONGA ISLANDS
+12,Kermadec - Tonga - Samoa Basin Area,174,TONGA ISLANDS REGION
+12,Kermadec - Tonga - Samoa Basin Area,175,SOUTH OF TONGA ISLANDS
+12,Kermadec - Tonga - Samoa Basin Area,176,NORTH OF NEW ZEALAND
+12,Kermadec - Tonga - Samoa Basin Area,177,KERMADEC ISLANDS REGION
+12,Kermadec - Tonga - Samoa Basin Area,178,"KERMADEC ISLANDS, NEW ZEALAND"
+12,Kermadec - Tonga - Samoa Basin Area,179,SOUTH OF KERMADEC ISLANDS
+13,Fiji Islands Area,180,NORTH OF FIJI ISLANDS
+13,Fiji Islands Area,181,FIJI ISLANDS REGION
+13,Fiji Islands Area,182,FIJI ISLANDS
+14,Vanuatu Islands,183,SANTA CRUZ ISLANDS REGION
+14,Vanuatu Islands,184,SANTA CRUZ ISLANDS
+14,Vanuatu Islands,185,VANUATU ISLANDS REGION
+14,Vanuatu Islands,186,VANUATU ISLANDS
+14,Vanuatu Islands,187,NEW CALEDONIA
+14,Vanuatu Islands,188,LOYALTY ISLANDS
+14,Vanuatu Islands,189,SOUTHEAST OF LOYALTY ISLANDS
+15,Bismarck and Solomon Islands,190,"NEW IRELAND REGION, P.N.G."
+15,Bismarck and Solomon Islands,191,NORTH OF SOLOMON ISLANDS
+15,Bismarck and Solomon Islands,192,"NEW BRITAIN REGION, P.N.G."
+15,Bismarck and Solomon Islands,193,SOLOMON ISLANDS
+15,Bismarck and Solomon Islands,194,D'ENTRECASTEAUX ISLANDS REGION
+15,Bismarck and Solomon Islands,195,SOUTH OF SOLOMON ISLANDS
+16,New Guinea,196,"IRIAN JAYA REGION, INDONESIA"
+16,New Guinea,197,NEAR NORTH COAST OF IRIAN JAYA
+16,New Guinea,198,"NINIGO ISLANDS REGION, P.N.G."
+16,New Guinea,199,"ADMIRALTY ISLANDS REGION, P.N.G."
+16,New Guinea,200,"NEAR N COAST OF NEW GUINEA, PNG."
+16,New Guinea,201,"IRIAN JAYA, INDONESIA"
+16,New Guinea,202,"NEW GUINEA, PAPUA NEW GUINEA"
+16,New Guinea,203,BISMARCK SEA
+16,New Guinea,204,"ARU ISLANDS REGION, INDONESIA"
+16,New Guinea,205,NEAR SOUTH COAST OF IRIAN JAYA
+16,New Guinea,206,"NEAR S COAST OF NEW GUINEA, PNG."
+16,New Guinea,207,"EASTERN NEW GUINEA REG., P.N.G."
+16,New Guinea,208,ARAFURA SEA
+17,Caroline Islands Area,209,"W. CAROLINE ISLANDS, MICRONESIA"
+17,Caroline Islands Area,210,SOUTH OF MARIANA ISLANDS
+18,Guam to Japan,211,"SOUTHEAST OF HONSHU, JAPAN"
+18,Guam to Japan,212,"BONIN ISLANDS, JAPAN REGION"
+18,Guam to Japan,213,"VOLCANO ISLANDS, JAPAN REGION"
+18,Guam to Japan,214,WEST OF MARIANA ISLANDS
+18,Guam to Japan,215,MARIANA ISLANDS REGION
+18,Guam to Japan,216,MARIANA ISLANDS
+19,Japan - Kuril Islands - Kamchatka Peninsula,217,"KAMCHATKA PENINSULA, RUSSIA"
+19,Japan - Kuril Islands - Kamchatka Peninsula,218,NEAR EAST COAST OF KAMCHATKA
+19,Japan - Kuril Islands - Kamchatka Peninsula,219,OFF EAST COAST OF KAMCHATKA
+19,Japan - Kuril Islands - Kamchatka Peninsula,220,NORTHWEST OF KURIL ISLANDS
+19,Japan - Kuril Islands - Kamchatka Peninsula,221,KURIL ISLANDS
+19,Japan - Kuril Islands - Kamchatka Peninsula,222,EAST OF KURIL ISLANDS
+19,Japan - Kuril Islands - Kamchatka Peninsula,223,EASTERN SEA OF JAPAN
+19,Japan - Kuril Islands - Kamchatka Peninsula,224,"HOKKAIDO, JAPAN REGION"
+19,Japan - Kuril Islands - Kamchatka Peninsula,225,"OFF COAST OF HOKKAIDO, JAPAN"
+19,Japan - Kuril Islands - Kamchatka Peninsula,226,"NEAR WEST COAST OF HONSHU, JAPAN"
+19,Japan - Kuril Islands - Kamchatka Peninsula,227,"EASTERN HONSHU, JAPAN"
+19,Japan - Kuril Islands - Kamchatka Peninsula,228,"NEAR EAST COAST OF HONSHU, JAPAN"
+19,Japan - Kuril Islands - Kamchatka Peninsula,229,"OFF EAST COAST OF HONSHU, JAPAN"
+19,Japan - Kuril Islands - Kamchatka Peninsula,230,"NEAR S. COAST OF HONSHU, JAPAN"
+20,Southwestern Japan and Ryukyu Islands,231,SOUTH KOREA
+20,Southwestern Japan and Ryukyu Islands,232,"WESTERN HONSHU, JAPAN"
+20,Southwestern Japan and Ryukyu Islands,233,NEAR S. COAST OF WESTERN HONSHU
+20,Southwestern Japan and Ryukyu Islands,234,NORTHWEST OF RYUKYU ISLANDS
+20,Southwestern Japan and Ryukyu Islands,235,"KYUSHU, JAPAN"
+20,Southwestern Japan and Ryukyu Islands,236,"SHIKOKU, JAPAN"
+20,Southwestern Japan and Ryukyu Islands,237,"SOUTHEAST OF SHIKOKU, JAPAN"
+20,Southwestern Japan and Ryukyu Islands,238,"RYUKYU ISLANDS, JAPAN"
+20,Southwestern Japan and Ryukyu Islands,239,SOUTHEAST OF RYUKYU ISLANDS
+20,Southwestern Japan and Ryukyu Islands,240,WEST OF BONIN ISLANDS
+20,Southwestern Japan and Ryukyu Islands,241,PHILIPPINE SEA
+21,Taiwan Area,242,NEAR COAST OF SOUTHEASTERN CHINA
+21,Taiwan Area,243,TAIWAN REGION
+21,Taiwan Area,244,TAIWAN
+21,Taiwan Area,245,NORTHEAST OF TAIWAN
+21,Taiwan Area,246,"SOUTHWESTERN RYUKYU ISL., JAPAN"
+21,Taiwan Area,247,SOUTHEAST OF TAIWAN
+22,Philippine Islands,248,PHILIPPINE ISLANDS REGION
+22,Philippine Islands,249,"LUZON, PHILIPPINES"
+22,Philippine Islands,250,"MINDORO, PHILIPPINES"
+22,Philippine Islands,251,"SAMAR, PHILIPPINES"
+22,Philippine Islands,252,"PALAWAN, PHILIPPINES"
+22,Philippine Islands,253,SULU SEA
+22,Philippine Islands,254,"PANAY, PHILIPPINES"
+22,Philippine Islands,255,"CEBU, PHILIPPINES"
+22,Philippine Islands,256,"LEYTE, PHILIPPINES"
+22,Philippine Islands,257,"NEGROS, PHILIPPINES"
+22,Philippine Islands,258,"SULU ARCHIPELAGO, PHILIPPINES"
+22,Philippine Islands,259,"MINDANAO, PHILIPPINES"
+22,Philippine Islands,260,EAST OF PHILIPPINE ISLANDS
+23,Bornea - Sulawesi,261,BORNEO
+23,Bornea - Sulawesi,262,CELEBES SEA
+23,Bornea - Sulawesi,263,"TALAUD ISLANDS, INDONESIA"
+23,Bornea - Sulawesi,264,"NORTH OF HALMAHERA, INDONESIA"
+23,Bornea - Sulawesi,265,"MINAHASSA PENINSULA, SULAWESI"
+23,Bornea - Sulawesi,266,NORTHERN MOLUCCA SEA
+23,Bornea - Sulawesi,267,"HALMAHERA, INDONESIA"
+23,Bornea - Sulawesi,268,"SULAWESI, INDONESIA"
+23,Bornea - Sulawesi,269,SOUTHERN MOLUCCA SEA
+23,Bornea - Sulawesi,270,CERAM SEA
+23,Bornea - Sulawesi,271,"BURU, INDONESIA"
+23,Bornea - Sulawesi,272,"SERAM, INDONESIA"
+24,Sunda Arc,273,"SOUTHWEST OF SUMATERA, INDONESIA"
+24,Sunda Arc,274,"SOUTHERN SUMATERA, INDONESIA"
+24,Sunda Arc,275,JAVA SEA
+24,Sunda Arc,276,"SUNDA STRAIT, INDONESIA"
+24,Sunda Arc,277,"JAVA, INDONESIA"
+24,Sunda Arc,278,BALI SEA
+24,Sunda Arc,279,FLORES SEA
+24,Sunda Arc,280,BANDA SEA
+24,Sunda Arc,281,"TANIMBAR ISLANDS REG., INDONESIA"
+24,Sunda Arc,282,"SOUTH OF JAVA, INDONESIA"
+24,Sunda Arc,283,"BALI REGION, INDONESIA"
+24,Sunda Arc,284,"SOUTH OF BALI, INDONESIA"
+24,Sunda Arc,285,"SUMBAWA REGION, INDONESIA"
+24,Sunda Arc,286,"FLORES REGION, INDONESIA"
+24,Sunda Arc,287,"SUMBA REGION, INDONESIA"
+24,Sunda Arc,288,SAVU SEA
+24,Sunda Arc,289,TIMOR REGION
+24,Sunda Arc,290,TIMOR SEA
+24,Sunda Arc,291,"SOUTH OF SUMBAWA, INDONESIA"
+24,Sunda Arc,292,"SOUTH OF SUMBA, INDONESIA"
+24,Sunda Arc,293,"SOUTH OF TIMOR, INDONESIA"
+25,Myanmar and Southeast Asia,294,MYANMAR-INDIA BORDER REGION
+25,Myanmar and Southeast Asia,295,MYANMAR-BANGLADESH BORDER REGION
+25,Myanmar and Southeast Asia,296,MYANMAR
+25,Myanmar and Southeast Asia,297,MYANMAR-CHINA BORDER REGION
+25,Myanmar and Southeast Asia,298,NEAR SOUTH COAST OF MYANMAR
+25,Myanmar and Southeast Asia,299,SOUTHEAST ASIA (NOT IN USE)
+25,Myanmar and Southeast Asia,300,"HAINAN ISLAND, CHINA"
+25,Myanmar and Southeast Asia,301,SOUTH CHINA SEA
+25,Myanmar and Southeast Asia,733,THAILAND
+25,Myanmar and Southeast Asia,734,LAOS
+25,Myanmar and Southeast Asia,735,CAMBODIA
+25,Myanmar and Southeast Asia,736,VIETNAM
+25,Myanmar and Southeast Asia,737,GULF OF TONGKING
+26,India - Xizand - Sichuan - Yunnan,302,EASTERN KASHMIR
+26,India - Xizand - Sichuan - Yunnan,303,KASHMIR-INDIA BORDER REGION
+26,India - Xizand - Sichuan - Yunnan,304,KASHMIR-XIZANG BORDER REGION
+26,India - Xizand - Sichuan - Yunnan,305,WESTERN XIZANG-INDIA BORDER REGION
+26,India - Xizand - Sichuan - Yunnan,306,XIZANG
+26,India - Xizand - Sichuan - Yunnan,307,"SICHUAN, CHINA"
+26,India - Xizand - Sichuan - Yunnan,308,NORTHERN INDIA
+26,India - Xizand - Sichuan - Yunnan,309,NEPAL-INDIA BORDER REGION
+26,India - Xizand - Sichuan - Yunnan,310,NEPAL
+26,India - Xizand - Sichuan - Yunnan,311,"SIKKIM, INDIA"
+26,India - Xizand - Sichuan - Yunnan,312,BHUTAN
+26,India - Xizand - Sichuan - Yunnan,313,EASTERN XIZANG-INDIA BORDER REG.
+26,India - Xizand - Sichuan - Yunnan,314,SOUTHERN INDIA
+26,India - Xizand - Sichuan - Yunnan,315,INDIA-BANGLADESH BORDER REGION
+26,India - Xizand - Sichuan - Yunnan,316,BANGLADESH
+26,India - Xizand - Sichuan - Yunnan,317,NORTHEASTERN INDIA
+26,India - Xizand - Sichuan - Yunnan,318,"YUNNAN, CHINA"
+26,India - Xizand - Sichuan - Yunnan,319,BAY OF BENGAL
+27,Southern Xinjiang to Gansu,320,KYRGYZSTAN-XINJIANG BORDER REG.
+27,Southern Xinjiang to Gansu,321,"SOUTHERN XINJIANG, CHINA"
+27,Southern Xinjiang to Gansu,322,"GANSU, CHINA"
+27,Southern Xinjiang to Gansu,323,"WESTERN NEI MONGOL, CHINA"
+27,Southern Xinjiang to Gansu,324,KASHMIR-XINJIANG BORDER REGION
+27,Southern Xinjiang to Gansu,325,"QINGHAI, CHINA"
+28,Lake Issyk-Kul to Lake Baykal,326,"SOUTHWESTERN SIBERIA, RUSSIA"
+28,Lake Issyk-Kul to Lake Baykal,327,"LAKE BAYKAL REGION, RUSSIA"
+28,Lake Issyk-Kul to Lake Baykal,328,"EAST OF LAKE BAYKAL, RUSSIA"
+28,Lake Issyk-Kul to Lake Baykal,329,EASTERN KAZAKHSTAN
+28,Lake Issyk-Kul to Lake Baykal,330,LAKE ISSYK-KUL REGION
+28,Lake Issyk-Kul to Lake Baykal,331,KAZAKHSTAN-XINJIANG BORDER REG.
+28,Lake Issyk-Kul to Lake Baykal,332,"NORTHERN XINJIANG, CHINA"
+28,Lake Issyk-Kul to Lake Baykal,333,RUSSIA-MONGOLIA BORDER REGION
+28,Lake Issyk-Kul to Lake Baykal,334,MONGOLIA
+29,Western Asia,335,"URAL MOUNTAINS REGION, RUSSIA"
+29,Western Asia,336,WESTERN KAZAKHSTAN
+29,Western Asia,337,EASTERN CAUCASUS
+29,Western Asia,338,CASPIAN SEA
+29,Western Asia,339,NORTHWESTERN UZBEKISTAN
+29,Western Asia,340,TURKMENISTAN
+29,Western Asia,341,TURKMENISTAN-IRAN BORDER REGION
+29,Western Asia,342,TURKMENISTAN-AFGHANISTAN BRD REG
+29,Western Asia,343,TURKEY-IRAN BORDER REGION
+29,Western Asia,344,ARMENIA-AZERBAIJAN-IRAN BORD REG
+29,Western Asia,345,NORTHWESTERN IRAN
+29,Western Asia,346,IRAN-IRAQ BORDER REGION
+29,Western Asia,347,WESTERN IRAN
+29,Western Asia,348,NORTHERN AND CENTRAL IRAN
+29,Western Asia,349,NORTHWESTERN AFGHANISTAN
+29,Western Asia,350,SOUTHWESTERN AFGHANISTAN
+29,Western Asia,351,EASTERN ARABIAN PENINSULA
+29,Western Asia,352,PERSIAN GULF
+29,Western Asia,353,SOUTHERN IRAN
+29,Western Asia,354,SOUTHWESTERN PAKISTAN
+29,Western Asia,355,GULF OF OMAN
+29,Western Asia,356,OFF COAST OF PAKISTAN
+30,Middle East - Crimea - Eastern Balkans,357,UKRAINE-MOLDOVA-SW RUSSIA REGION
+30,Middle East - Crimea - Eastern Balkans,358,ROMANIA
+30,Middle East - Crimea - Eastern Balkans,359,BULGARIA
+30,Middle East - Crimea - Eastern Balkans,360,BLACK SEA
+30,Middle East - Crimea - Eastern Balkans,361,"CRIMEA REGION, UKRAINE"
+30,Middle East - Crimea - Eastern Balkans,362,WESTERN CAUCASUS
+30,Middle East - Crimea - Eastern Balkans,363,GREECE-BULGARIA BORDER REGION
+30,Middle East - Crimea - Eastern Balkans,364,GREECE
+30,Middle East - Crimea - Eastern Balkans,365,AEGEAN SEA
+30,Middle East - Crimea - Eastern Balkans,366,TURKEY
+30,Middle East - Crimea - Eastern Balkans,367,GEORGIA-ARMENIA-TURKEY BORD REG.
+30,Middle East - Crimea - Eastern Balkans,368,SOUTHERN GREECE
+30,Middle East - Crimea - Eastern Balkans,369,"DODECANESE ISLANDS, GREECE"
+30,Middle East - Crimea - Eastern Balkans,370,"CRETE, GREECE"
+30,Middle East - Crimea - Eastern Balkans,371,EASTERN MEDITERRANEAN SEA
+30,Middle East - Crimea - Eastern Balkans,372,CYPRUS REGION
+30,Middle East - Crimea - Eastern Balkans,373,DEAD SEA REGION
+30,Middle East - Crimea - Eastern Balkans,374,JORDAN - SYRIA REGION
+30,Middle East - Crimea - Eastern Balkans,375,IRAQ
+31,Western Mediterranean Area,376,PORTUGAL
+31,Western Mediterranean Area,377,SPAIN
+31,Western Mediterranean Area,378,PYRENEES
+31,Western Mediterranean Area,379,NEAR SOUTH COAST OF FRANCE
+31,Western Mediterranean Area,380,"CORSICA, FRANCE"
+31,Western Mediterranean Area,381,CENTRAL ITALY
+31,Western Mediterranean Area,382,ADRIATIC SEA
+31,Western Mediterranean Area,383,NORTHWESTERN BALKAN REGION
+31,Western Mediterranean Area,384,WEST OF GIBRALTAR
+31,Western Mediterranean Area,385,STRAIT OF GIBRALTAR
+31,Western Mediterranean Area,386,"BALEARIC ISLANDS, SPAIN"
+31,Western Mediterranean Area,387,WESTERN MEDITERRANEAN SEA
+31,Western Mediterranean Area,388,"SARDINIA, ITALY"
+31,Western Mediterranean Area,389,TYRRHENIAN SEA
+31,Western Mediterranean Area,390,SOUTHERN ITALY
+31,Western Mediterranean Area,391,ALBANIA
+31,Western Mediterranean Area,392,GREECE-ALBANIA BORDER REGION
+31,Western Mediterranean Area,393,"MADEIRA ISLANDS, PORTUGAL REGION"
+31,Western Mediterranean Area,394,"CANARY ISLANDS, SPAIN REGION"
+31,Western Mediterranean Area,395,MOROCCO
+31,Western Mediterranean Area,396,NORTHERN ALGERIA
+31,Western Mediterranean Area,397,TUNISIA
+31,Western Mediterranean Area,398,"SICILY, ITALY"
+31,Western Mediterranean Area,399,IONIAN SEA
+31,Western Mediterranean Area,400,CENTRAL MEDITERRANEAN SEA
+31,Western Mediterranean Area,401,NEAR COAST OF LIBYA
+32,Atlantic Ocean,402,NORTH ATLANTIC OCEAN
+32,Atlantic Ocean,403,NORTHERN MID-ATLANTIC RIDGE
+32,Atlantic Ocean,404,AZORES ISLANDS REGION
+32,Atlantic Ocean,405,"AZORES ISLANDS, PORTUGAL"
+32,Atlantic Ocean,406,CENTRAL MID-ATLANTIC RIDGE
+32,Atlantic Ocean,407,NORTH OF ASCENSION ISLAND
+32,Atlantic Ocean,408,ASCENSION ISLAND REGION
+32,Atlantic Ocean,409,SOUTH ATLANTIC OCEAN
+32,Atlantic Ocean,410,SOUTHERN MID-ATLANTIC RIDGE
+32,Atlantic Ocean,411,TRISTAN DA CUNHA REGION
+32,Atlantic Ocean,412,BOUVET ISLAND REGION
+32,Atlantic Ocean,413,SOUTHWEST OF AFRICA
+32,Atlantic Ocean,414,SOUTHEASTERN ATLANTIC OCEAN
+32,Atlantic Ocean,738,REYKJANES RIDGE
+32,Atlantic Ocean,739,AZORES-CAPE ST. VINCENT RIDGE
+33,Indian Ocean,415,EASTERN GULF OF ADEN
+33,Indian Ocean,416,SOCOTRA REGION
+33,Indian Ocean,417,ARABIAN SEA
+33,Indian Ocean,418,"LAKSHADWEEP REGION, INDIA"
+33,Indian Ocean,419,NORTHEASTERN SOMALIA
+33,Indian Ocean,420,NORTH INDIAN OCEAN
+33,Indian Ocean,421,CARLSBERG RIDGE
+33,Indian Ocean,422,MALDIVE ISLANDS REGION
+33,Indian Ocean,423,LACCADIVE SEA
+33,Indian Ocean,424,SRI LANKA
+33,Indian Ocean,425,SOUTH INDIAN OCEAN
+33,Indian Ocean,426,CHAGOS ARCHIPELAGO REGION
+33,Indian Ocean,427,MAURITIUS - REUNION REGION
+33,Indian Ocean,428,SOUTHWEST INDIAN RIDGE
+33,Indian Ocean,429,MID-INDIAN RIDGE
+33,Indian Ocean,430,SOUTH OF AFRICA
+33,Indian Ocean,431,PRINCE EDWARD ISLANDS REGION
+33,Indian Ocean,432,CROZET ISLANDS REGION
+33,Indian Ocean,433,KERGUELEN ISLANDS REGION
+33,Indian Ocean,434,BROKEN RIDGE
+33,Indian Ocean,435,SOUTHEAST INDIAN RIDGE
+33,Indian Ocean,436,SOUTHERN KERGUELEN PLATEAU
+33,Indian Ocean,437,SOUTH OF AUSTRALIA
+33,Indian Ocean,740,OWEN FRACTURE ZONE REGION
+33,Indian Ocean,741,INDIAN OCEAN TRIPLE JUNCTION
+33,Indian Ocean,742,WESTERN INDIAN-ANTARCTIC RIDGE
+34,Eastern North America,438,"SASKATCHEWAN, CANADA"
+34,Eastern North America,439,"MANITOBA, CANADA"
+34,Eastern North America,440,HUDSON BAY
+34,Eastern North America,441,"ONTARIO, CANADA"
+34,Eastern North America,442,"HUDSON STRAIT REGION, CANADA"
+34,Eastern North America,443,"NORTHERN QUEBEC, CANADA"
+34,Eastern North America,444,DAVIS STRAIT
+34,Eastern North America,445,"LABRADOR, CANADA"
+34,Eastern North America,446,LABRADOR SEA
+34,Eastern North America,447,"SOUTHERN QUEBEC, CANADA"
+34,Eastern North America,448,"GASPE PENINSULA, CANADA"
+34,Eastern North America,449,"EASTERN QUEBEC, CANADA"
+34,Eastern North America,450,"ANTICOSTI ISLAND, CANADA"
+34,Eastern North America,451,"NEW BRUNSWICK, CANADA"
+34,Eastern North America,452,"NOVA SCOTIA, CANADA"
+34,Eastern North America,453,"PRINCE EDWARD ISLAND, CANADA"
+34,Eastern North America,454,GULF OF ST. LAWRENCE
+34,Eastern North America,455,"NEWFOUNDLAND, CANADA"
+34,Eastern North America,456,MONTANA
+34,Eastern North America,457,EASTERN IDAHO
+34,Eastern North America,458,HEBGEN LAKE REGION
+34,Eastern North America,459,"YELLOWSTONE REGION, WYOMING"
+34,Eastern North America,460,WYOMING
+34,Eastern North America,461,NORTH DAKOTA
+34,Eastern North America,462,SOUTH DAKOTA
+34,Eastern North America,463,NEBRASKA
+34,Eastern North America,464,MINNESOTA
+34,Eastern North America,465,IOWA
+34,Eastern North America,466,WISCONSIN
+34,Eastern North America,467,ILLINOIS
+34,Eastern North America,468,MICHIGAN
+34,Eastern North America,469,INDIANA
+34,Eastern North America,470,"SOUTHERN ONTARIO, CANADA"
+34,Eastern North America,471,OHIO
+34,Eastern North America,472,NEW YORK
+34,Eastern North America,473,PENNSYLVANIA
+34,Eastern North America,474,VERMONT - NEW HAMPSHIRE REGION
+34,Eastern North America,475,MAINE
+34,Eastern North America,476,SOUTHERN NEW ENGLAND
+34,Eastern North America,477,GULF OF MAINE
+34,Eastern North America,478,UTAH
+34,Eastern North America,479,COLORADO
+34,Eastern North America,480,KANSAS
+34,Eastern North America,481,IOWA-MISSOURI BORDER REGION
+34,Eastern North America,482,MISSOURI-KANSAS BORDER REGION
+34,Eastern North America,483,MISSOURI
+34,Eastern North America,484,MISSOURI-ARKANSAS BORDER REGION
+34,Eastern North America,485,EASTERN MISSOURI
+34,Eastern North America,486,"NEW MADRID, MISSOURI REGION"
+34,Eastern North America,487,"CAPE GIRARDEAU, MISSOURI REGION"
+34,Eastern North America,488,SOUTHERN ILLINOIS
+34,Eastern North America,489,SOUTHERN INDIANA
+34,Eastern North America,490,KENTUCKY
+34,Eastern North America,491,WEST VIRGINIA
+34,Eastern North America,492,VIRGINIA
+34,Eastern North America,493,CHESAPEAKE BAY REGION
+34,Eastern North America,494,NEW JERSEY
+34,Eastern North America,495,EASTERN ARIZONA
+34,Eastern North America,496,NEW MEXICO
+34,Eastern North America,497,TEXAS PANHANDLE REGION
+34,Eastern North America,498,WESTERN TEXAS
+34,Eastern North America,499,OKLAHOMA
+34,Eastern North America,500,CENTRAL TEXAS
+34,Eastern North America,501,ARKANSAS-OKLAHOMA BORDER REGION
+34,Eastern North America,502,ARKANSAS
+34,Eastern North America,503,LOUISIANA-TEXAS BORDER REGION
+34,Eastern North America,504,LOUISIANA
+34,Eastern North America,505,MISSISSIPPI
+34,Eastern North America,506,TENNESSEE
+34,Eastern North America,507,ALABAMA
+34,Eastern North America,508,WESTERN FLORIDA
+34,Eastern North America,509,"GEORGIA, USA"
+34,Eastern North America,510,FLORIDA-GEORGIA BORDER REGION
+34,Eastern North America,511,SOUTH CAROLINA
+34,Eastern North America,512,NORTH CAROLINA
+34,Eastern North America,513,OFF EAST COAST OF UNITED STATES
+34,Eastern North America,514,FLORIDA PENINSULA
+34,Eastern North America,515,BAHAMA ISLANDS
+34,Eastern North America,516,E. ARIZONA-SONORA BORDER REGION
+34,Eastern North America,517,NEW MEXICO-CHIHUAHUA BORDER REG.
+34,Eastern North America,518,TEXAS-MEXICO BORDER REGION
+34,Eastern North America,519,SOUTHERN TEXAS
+34,Eastern North America,520,NEAR COAST OF TEXAS
+34,Eastern North America,521,"CHIHUAHUA, MEXICO"
+34,Eastern North America,522,NORTHERN MEXICO
+34,Eastern North America,523,CENTRAL MEXICO
+34,Eastern North America,524,"JALISCO, MEXICO"
+34,Eastern North America,525,"VERACRUZ, MEXICO"
+34,Eastern North America,526,GULF OF MEXICO
+34,Eastern North America,527,BAY OF CAMPECHE
+35,Eastern South America,528,BRAZIL
+35,Eastern South America,529,GUYANA
+35,Eastern South America,530,SURINAME
+35,Eastern South America,531,FRENCH GUIANA
+36,Northwestern Europe,532,IRELAND
+36,Northwestern Europe,533,UNITED KINGDOM
+36,Northwestern Europe,534,NORTH SEA
+36,Northwestern Europe,535,SOUTHERN NORWAY
+36,Northwestern Europe,536,SWEDEN
+36,Northwestern Europe,537,BALTIC SEA
+36,Northwestern Europe,538,FRANCE
+36,Northwestern Europe,539,BAY OF BISCAY
+36,Northwestern Europe,540,THE NETHERLANDS
+36,Northwestern Europe,541,BELGIUM
+36,Northwestern Europe,542,DENMARK
+36,Northwestern Europe,543,GERMANY
+36,Northwestern Europe,544,SWITZERLAND
+36,Northwestern Europe,545,NORTHERN ITALY
+36,Northwestern Europe,546,AUSTRIA
+36,Northwestern Europe,547,CZECH AND SLOVAK REPUBLICS
+36,Northwestern Europe,548,POLAND
+36,Northwestern Europe,549,HUNGARY
+37,Africa,551,SOUTHERN ALGERIA
+37,Africa,552,LIBYA
+37,Africa,553,EGYPT
+37,Africa,554,RED SEA
+37,Africa,555,WESTERN ARABIAN PENINSULA
+37,Africa,556,CHAD REGION
+37,Africa,557,SUDAN
+37,Africa,558,ETHIOPIA
+37,Africa,559,WESTERN GULF OF ADEN
+37,Africa,560,NORTHWESTERN SOMALIA
+37,Africa,561,OFF S. COAST OF NORTHWEST AFRICA
+37,Africa,562,CAMEROON
+37,Africa,563,EQUATORIAL GUINEA
+37,Africa,564,CENTRAL AFRICAN REPUBLIC
+37,Africa,565,GABON
+37,Africa,566,REPUBLIC OF CONGO
+37,Africa,567,DEMOCRATIC REPUBLIC OF CONGO
+37,Africa,568,UGANDA
+37,Africa,569,LAKE VICTORIA REGION
+37,Africa,570,KENYA
+37,Africa,571,SOUTHERN SOMALIA
+37,Africa,572,LAKE TANGANYIKA REGION
+37,Africa,573,TANZANIA
+37,Africa,574,NORTHWEST OF MADAGASCAR
+37,Africa,575,ANGOLA
+37,Africa,576,ZAMBIA
+37,Africa,577,MALAWI
+37,Africa,578,NAMIBIA
+37,Africa,579,BOTSWANA
+37,Africa,580,ZIMBABWE
+37,Africa,581,MOZAMBIQUE
+37,Africa,582,MOZAMBIQUE CHANNEL
+37,Africa,583,MADAGASCAR
+37,Africa,584,SOUTH AFRICA
+37,Africa,585,LESOTHO
+37,Africa,586,SWAZILAND
+37,Africa,587,OFF COAST OF SOUTH AFRICA
+37,Africa,743,WESTERN SAHARA
+37,Africa,744,MAURITANIA
+37,Africa,745,MALI
+37,Africa,746,SENEGAL - GAMBIA REGION
+37,Africa,747,GUINEA REGION
+37,Africa,748,SIERRA LEONE
+37,Africa,749,LIBERIA REGION
+37,Africa,750,COTE D'IVOIRE
+37,Africa,751,BURKINA FASO
+37,Africa,752,GHANA
+37,Africa,753,BENIN - TOGO REGION
+37,Africa,754,NIGER
+37,Africa,755,NIGERIA
+38,Australia,588,NORTHWEST OF AUSTRALIA
+38,Australia,589,WEST OF AUSTRALIA
+38,Australia,590,WESTERN AUSTRALIA
+38,Australia,591,"NORTHERN TERRITORY, AUSTRALIA"
+38,Australia,592,SOUTH AUSTRALIA
+38,Australia,593,GULF OF CARPENTARIA
+38,Australia,594,"QUEENSLAND, AUSTRALIA"
+38,Australia,595,CORAL SEA
+38,Australia,596,NORTHWEST OF NEW CALEDONIA
+38,Australia,597,SOUTHWEST OF NEW CALEDONIA
+38,Australia,598,SOUTHWEST OF AUSTRALIA
+38,Australia,599,OFF SOUTH COAST OF AUSTRALIA
+38,Australia,600,NEAR COAST OF SOUTH AUSTRALIA
+38,Australia,601,"NEW SOUTH WALES, AUSTRALIA"
+38,Australia,602,"VICTORIA, AUSTRALIA"
+38,Australia,603,NEAR S.E. COAST OF AUSTRALIA
+38,Australia,604,NEAR EAST COAST OF AUSTRALIA
+38,Australia,605,EAST OF AUSTRALIA
+38,Australia,606,NORFOLK ISLAND REGION
+38,Australia,607,NORTHWEST OF NEW ZEALAND
+38,Australia,608,BASS STRAIT
+38,Australia,609,"TASMANIA REGION, AUSTRALIA REGION"
+38,Australia,610,SOUTHEAST OF AUSTRALIA
+39,Pacific Basin,611,NORTH PACIFIC OCEAN
+39,Pacific Basin,612,HAWAIIAN ISLANDS REGION
+39,Pacific Basin,613,HAWAII
+39,Pacific Basin,614,"E. CAROLINE ISLANDS, MICRONESIA"
+39,Pacific Basin,615,MARSHALL ISLANDS REGION
+39,Pacific Basin,616,"ENEWETAK ATOLL REG, MARSHALL IS."
+39,Pacific Basin,617,"BIKINI ATOLL REG., MARSHALL IS."
+39,Pacific Basin,618,"GILBERT ISLANDS, KIRIBATI REGION"
+39,Pacific Basin,619,JOHNSTON ISLAND REGION
+39,Pacific Basin,620,"LINE ISLANDS REGION, KIRIBATI"
+39,Pacific Basin,621,"PALMYRA ISLAND REGION, KIRIBATI"
+39,Pacific Basin,622,"KIRITIMATI REGION, KIRIBATI"
+39,Pacific Basin,623,TUVALU REGION
+39,Pacific Basin,624,"PHOENIX ISLANDS, KIRIBATI REGION"
+39,Pacific Basin,625,TOKELAU ISLANDS REGION
+39,Pacific Basin,626,NORTHERN COOK ISLANDS
+39,Pacific Basin,627,COOK ISLANDS REGION
+39,Pacific Basin,628,SOCIETY ISLANDS REGION
+39,Pacific Basin,629,TUBUAI ISLANDS REGION
+39,Pacific Basin,630,MARQUESAS ISLANDS REGION
+39,Pacific Basin,631,TUAMOTU ARCHIPELAGO REGION
+39,Pacific Basin,632,SOUTH PACIFIC OCEAN
+40,Arctic Zone,633,LOMONOSOV RIDGE
+40,Arctic Zone,634,ARCTIC OCEAN
+40,Arctic Zone,635,NEAR NORTH COAST OF GREENLAND
+40,Arctic Zone,636,EASTERN GREENLAND
+40,Arctic Zone,637,ICELAND REGION
+40,Arctic Zone,638,ICELAND
+40,Arctic Zone,639,JAN MAYEN ISLAND REGION
+40,Arctic Zone,640,GREENLAND SEA
+40,Arctic Zone,641,NORTH OF SVALBARD
+40,Arctic Zone,642,NORWEGIAN SEA
+40,Arctic Zone,643,SVALBARD REGION
+40,Arctic Zone,644,NORTH OF FRANZ JOSEF LAND
+40,Arctic Zone,645,"FRANZ JOSEF LAND, RUSSIA"
+40,Arctic Zone,646,NORTHERN NORWAY
+40,Arctic Zone,647,BARENTS SEA
+40,Arctic Zone,648,"NOVAYA ZEMLYA, RUSSIA"
+40,Arctic Zone,649,KARA SEA
+40,Arctic Zone,650,"NEAR COAST OF W. SIBERIA, RUSSIA"
+40,Arctic Zone,651,NORTH OF SEVERNAYA ZEMLYA
+40,Arctic Zone,652,"SEVERNAYA ZEMLYA, RUSSIA"
+40,Arctic Zone,653,"NEAR COAST OF C. SIBERIA, RUSSIA"
+40,Arctic Zone,654,"EAST OF SEVERNAYA ZEMLYA, RUSSIA"
+40,Arctic Zone,655,LAPTEV SEA
+41,Eastern Asia,656,"SOUTHEASTERN SIBERIA, RUSSIA"
+41,Eastern Asia,657,E. RUSSIA-N.E. CHINA BORDER REG.
+41,Eastern Asia,658,NORTHEASTERN CHINA
+41,Eastern Asia,659,NORTH KOREA
+41,Eastern Asia,660,SEA OF JAPAN
+41,Eastern Asia,661,"PRIMOR'YE, RUSSIA"
+41,Eastern Asia,662,"SAKHALIN, RUSSIA"
+41,Eastern Asia,663,SEA OF OKHOTSK
+41,Eastern Asia,664,SOUTHEASTERN CHINA
+41,Eastern Asia,665,YELLOW SEA
+41,Eastern Asia,666,OFF EASY COAST OF EASTERN CHINA
+42,"Northeasterb Asia, Northern Alaska to Greeland",667,NORTH OF NEW SIBERIAN ISLANDS
+42,"Northeasterb Asia, Northern Alaska to Greeland",668,"NEW SIBERIAN ISLANDS, RUSSIA"
+42,"Northeasterb Asia, Northern Alaska to Greeland",669,EAST SIBERIAN SEA
+42,"Northeasterb Asia, Northern Alaska to Greeland",670,NEAR N. COAST OF EASTERN SIBERIA
+42,"Northeasterb Asia, Northern Alaska to Greeland",671,"EASTERN SIBERIA, RUSSIA"
+42,"Northeasterb Asia, Northern Alaska to Greeland",672,CHUKCHI SEA
+42,"Northeasterb Asia, Northern Alaska to Greeland",673,BERING STRAIT
+42,"Northeasterb Asia, Northern Alaska to Greeland",674,"ST. LAWRENCE ISLAND, ALASKA REG."
+42,"Northeasterb Asia, Northern Alaska to Greeland",675,BEAUFORT SEA
+42,"Northeasterb Asia, Northern Alaska to Greeland",676,NORTHERN ALASKA
+42,"Northeasterb Asia, Northern Alaska to Greeland",677,"NORTHERN YUKON TERRITORY, CANADA"
+42,"Northeasterb Asia, Northern Alaska to Greeland",678,"QUEEN ELIZABETH ISLANDS, CANADA"
+42,"Northeasterb Asia, Northern Alaska to Greeland",679,"NW TERRITORIES - NUNAVUT, CANADA"
+42,"Northeasterb Asia, Northern Alaska to Greeland",680,WESTERN GREENLAND
+42,"Northeasterb Asia, Northern Alaska to Greeland",681,BAFFIN BAY
+42,"Northeasterb Asia, Northern Alaska to Greeland",682,"BAFFIN ISLAND REGION, CANADA"
+43,Southeastern & Antarctic Pacific Ocean,683,SOUTHEAST CENTRAL PACIFIC OCEAN
+43,Southeastern & Antarctic Pacific Ocean,684,SOUTHERN EAST PACIFIC RISE
+43,Southeastern & Antarctic Pacific Ocean,685,EASTER ISLAND REGION
+43,Southeastern & Antarctic Pacific Ocean,686,WEST CHILE RISE
+43,Southeastern & Antarctic Pacific Ocean,687,JUAN FERNANDEZ ISLANDS REGION
+43,Southeastern & Antarctic Pacific Ocean,688,"EAST OF NORTH ISLAND, N.Z."
+43,Southeastern & Antarctic Pacific Ocean,689,"CHATHAM ISLANDS, N.Z. REGION"
+43,Southeastern & Antarctic Pacific Ocean,690,SOUTH OF CHATHAM ISLANDS
+43,Southeastern & Antarctic Pacific Ocean,691,PACIFIC-ANTARCTIC RIDGE
+43,Southeastern & Antarctic Pacific Ocean,692,SOUTHERN PACIFIC OCEAN
+43,Southeastern & Antarctic Pacific Ocean,756,SOUTHEAST OF EASTER ISLAND
+44,Galapagos Islands Area,693,EAST CENTRAL PACIFIC OCEAN
+44,Galapagos Islands Area,694,CENTRAL EAST PACIFIC RISE
+44,Galapagos Islands Area,695,WEST OF GALAPAGOS ISLANDS
+44,Galapagos Islands Area,696,GALAPAGOS ISLANDS REGION
+44,Galapagos Islands Area,697,"GALAPAGOS ISLANDS, ECUADOR"
+44,Galapagos Islands Area,698,SOUTHWEST OF GALAPAGOS ISLANDS
+44,Galapagos Islands Area,699,SOUTHEAST OF GALAPAGOS ISLANDS
+44,Galapagos Islands Area,757,GALAPAGOS TRIPLE JUNGTION REGION
+45,Macquarie Loop,700,SOUTH OF TASMANIA
+45,Macquarie Loop,701,WEST OF MACQUARIE ISLAND
+45,Macquarie Loop,702,BALLENY ISLANDS REGION
+46,Andaman Islands to Sumatera,703,"ANDAMAN ISLANDS, INDIA REGION"
+46,Andaman Islands to Sumatera,704,"NICOBAR ISLANDS, INDIA REGION"
+46,Andaman Islands to Sumatera,705,OFF W COAST OF NORTHERN SUMATERA
+46,Andaman Islands to Sumatera,706,"NORTHERN SUMATERA, INDONESIA"
+46,Andaman Islands to Sumatera,707,MALAY PENINSULA
+46,Andaman Islands to Sumatera,708,GULF OF THAILAND
+47,Baluchistan,709,SOUTHEASTERN AFGHANISTAN
+47,Baluchistan,710,PAKISTAN
+47,Baluchistan,711,SOUTHWESTERN KASHMIR
+47,Baluchistan,712,INDIA-PAKISTAN BORDER REGION
+48,Hindu Kush and Pamir Area,713,CENTRAL KAZAKHSTAN
+48,Hindu Kush and Pamir Area,714,SOUTHEASTERN UZBEKISTAN
+48,Hindu Kush and Pamir Area,715,TAJIKISTAN
+48,Hindu Kush and Pamir Area,716,KYRGYZSTAN
+48,Hindu Kush and Pamir Area,717,AFGHANISTAN-TAJIKISTAN BORD REG.
+48,Hindu Kush and Pamir Area,718,"HINDU KUSH REGION, AFGHANISTAN"
+48,Hindu Kush and Pamir Area,719,TAJIKISTAN-XINJIANG BORDER REG.
+48,Hindu Kush and Pamir Area,720,NORTHWESTERN KASHMIR
+49,Northern Eurasia,721,FINLAND
+49,Northern Eurasia,722,NORWAY-RUSSIA BORDER REGION
+49,Northern Eurasia,723,FINLAND-RUSSIA BORDER REGION
+49,Northern Eurasia,724,BALTIC-BELARUS-NW RUSSIA REG.
+49,Northern Eurasia,725,"NORTHWESTERN SIBERIA, RUSSIA"
+49,Northern Eurasia,726,"NORTHCENTRAL SIBERIA, RUSSIA"
+50,Antarctica,727,"VICTORIA LAND, ANTARCTICA"
+50,Antarctica,728,ROSS SEA
+50,Antarctica,729,ANTARCTICA
