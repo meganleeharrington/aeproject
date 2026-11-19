@@ -1,0 +1,42 @@
+
+name: Historical Earthquake Backfill
+
+concurrency:
+  group: historical-earthquake-backfill
+  cancel-in-progress: false
+  
+on:
+  workflow_dispatch:
+    inputs:
+      max_batches:
+        description: "Number of unfinished daily batches to process"
+        required: true
+        default: "1"
+        type: string
+
+jobs:
+  historical-backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests snowflake-connector-python
+
+      - name: Run historical backfill
+        env:
+          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+          MAX_BATCHES: ${{ inputs.max_batches }}
+        run: python ingestion/earthquake_historical_backfill.py
