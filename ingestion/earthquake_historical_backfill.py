@@ -5,6 +5,7 @@ import json
 from datetime import datetime, timedelta
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+import time
 
 def create_retry_session():
     session = requests.Session()
@@ -34,7 +35,11 @@ def fetch_earthquakes(start_time, end_time):
         "starttime": start_time,
         "endtime": end_time,
         "eventtype": "earthquake",
-        "orderby": "time"
+        "orderby": "time",
+        "minlatitude": 10,
+        "maxlatitude": 72,
+        "minlongitude": -180,
+        "maxlongitude": -60
     }
 
     response = session.get(url, params=params, timeout=120)
@@ -42,13 +47,18 @@ def fetch_earthquakes(start_time, end_time):
 
     return response.json()
 
+
 def fetch_earthquake_count(start_time, end_time):
     url = "https://earthquake.usgs.gov/fdsnws/event/1/count"
 
     params = {
         "starttime": start_time,
         "endtime": end_time,
-        "eventtype": "earthquake"
+        "eventtype": "earthquake",
+        "minlatitude": 10,
+        "maxlatitude": 72,
+        "minlongitude": -180,
+        "maxlongitude": -60
     }
 
     response = session.get(url, params=params, timeout=120)
@@ -159,29 +169,23 @@ def get_existing_earthquake_ids(connection, earthquake_ids):
 
     return existing_events, existing_quakeml
 
-
 def process_batch(connection, batch_start, batch_end):
 
-    # Check whether this batch has already been completed
     if is_batch_complete(connection, batch_start, batch_end):
         print(f"Skipping completed batch: {batch_start}")
         return
 
-    # Check the expected number of earthquakes 
     expected_count = fetch_earthquake_count(
         batch_start.isoformat(),
         batch_end.isoformat()
     )
 
-    # Prevent processing batches that exceed the USGS API limit
     if expected_count > 20000:
         raise ValueError(
             f"Batch {batch_start} contains {expected_count} earthquakes, "
-            "exceeding the USGS API limit of 20,000. "
-            "Split this batch into smaller date ranges."
+            "exceeding the USGS API limit of 20,000."
         )
 
-    # Retrieve earthquakes for the date range
     earthquakes = fetch_earthquakes(
         batch_start.isoformat(),
         batch_end.isoformat()
@@ -200,7 +204,6 @@ def process_batch(connection, batch_start, batch_end):
         f"from {batch_start} to {batch_end}"
     )
 
-    # Retrieve existing earthquake IDs from Snowflake in two queries
     earthquake_ids = [earthquake["id"] for earthquake in features]
 
     existing_events, existing_quakeml = get_existing_earthquake_ids(
@@ -208,7 +211,12 @@ def process_batch(connection, batch_start, batch_end):
         earthquake_ids
     )
 
-    # Retrieve and load earthquakes that are not already fully stored
+    records = []
+    batch_size = 100
+
+    api_retrieval_time = 0
+    bulk_loading_time = 0
+
     for earthquake in features:
         earthquake_id = earthquake["id"]
 
@@ -216,19 +224,46 @@ def process_batch(connection, batch_start, batch_end):
             earthquake_id in existing_events
             and earthquake_id in existing_quakeml
         ):
-            print(f"Skipping existing earthquake {earthquake_id}")
             continue
+
+        api_start = time.perf_counter()
 
         details = fetch_earthquake_details(earthquake)
         quakeml = fetch_quakeml(details)
 
-        load_historical_earthquake(
+        api_retrieval_time += time.perf_counter() - api_start
+
+        records.append((details, quakeml))
+
+        if len(records) >= batch_size:
+            load_start = time.perf_counter()
+
+            load_historical_earthquakes_bulk(
+                connection,
+                records
+            )
+
+            bulk_loading_time += time.perf_counter() - load_start
+            records = []
+
+    # Load any remaining earthquakes
+    if records:
+        load_start = time.perf_counter()
+
+        load_historical_earthquakes_bulk(
             connection,
-            details,
-            quakeml
+            records
         )
 
-    # Only mark the batch complete after every earthquake succeeds
+        bulk_loading_time += time.perf_counter() - load_start
+
+    print(f"API retrieval time: {api_retrieval_time:.2f} seconds")
+    print(f"Bulk loading time: {bulk_loading_time:.2f} seconds")
+    print(
+        f"Combined retrieval and loading time: "
+        f"{(api_retrieval_time + bulk_loading_time) / 60:.2f} minutes"
+    )
+
     mark_batch_complete(
         connection,
         batch_start,
@@ -289,6 +324,120 @@ def load_historical_earthquake(connection, earthquake_details, quakeml):
             raise
 
     print(f"Processed historical earthquake {earthquake_id}")
+
+
+
+def load_historical_earthquakes_bulk(
+    connection,
+    records,
+    events_table="RAW.EARTHQUAKE_EVENTS",
+    quakeml_table="RAW.EARTHQUAKE_QUAKEML"
+):
+    if not records:
+        return
+
+    with connection.cursor() as cursor:
+
+        # Create temporary staging tables
+        cursor.execute("""
+            CREATE TEMPORARY TABLE IF NOT EXISTS
+                TEMP_HISTORICAL_EVENTS_STAGE (
+                    EARTHQUAKE_ID VARCHAR,
+                    EVENT_DATA VARCHAR
+                )
+        """)
+
+        cursor.execute("""
+            CREATE TEMPORARY TABLE IF NOT EXISTS
+                TEMP_HISTORICAL_QUAKEML_STAGE (
+                    EARTHQUAKE_ID VARCHAR,
+                    QUAKEML_XML VARCHAR
+                )
+        """)
+
+        event_records = [
+            (details["id"], json.dumps(details))
+            for details, quakeml in records
+        ]
+
+        quakeml_records = [
+            (details["id"], quakeml)
+            for details, quakeml in records
+            if quakeml is not None
+        ]
+
+        try:
+            cursor.execute("BEGIN")
+
+            # Clear staging tables
+            cursor.execute("""
+                DELETE FROM TEMP_HISTORICAL_EVENTS_STAGE
+            """)
+
+            cursor.execute("""
+                DELETE FROM TEMP_HISTORICAL_QUAKEML_STAGE
+            """)
+
+            # Bulk insert earthquake JSON into staging
+            cursor.executemany("""
+                INSERT INTO TEMP_HISTORICAL_EVENTS_STAGE (
+                    EARTHQUAKE_ID,
+                    EVENT_DATA
+                )
+                VALUES (%s, %s)
+            """, event_records)
+
+            # Bulk insert QuakeML into staging
+            if quakeml_records:
+                cursor.executemany("""
+                    INSERT INTO TEMP_HISTORICAL_QUAKEML_STAGE (
+                        EARTHQUAKE_ID,
+                        QUAKEML_XML
+                    )
+                    VALUES (%s, %s)
+                """, quakeml_records)
+
+            # Insert missing earthquake events
+            cursor.execute(f"""
+                INSERT INTO {events_table} (
+                    EARTHQUAKE_ID,
+                    EVENT_DATA
+                )
+                SELECT
+                    s.EARTHQUAKE_ID,
+                    PARSE_JSON(s.EVENT_DATA)
+                FROM TEMP_HISTORICAL_EVENTS_STAGE s
+                WHERE NOT EXISTS (
+                    SELECT 1
+                    FROM {events_table} e
+                    WHERE e.EARTHQUAKE_ID = s.EARTHQUAKE_ID
+                )
+            """)
+
+            # Insert missing QuakeML records
+            cursor.execute(f"""
+                INSERT INTO {quakeml_table} (
+                    EARTHQUAKE_ID,
+                    QUAKEML_XML
+                )
+                SELECT
+                    s.EARTHQUAKE_ID,
+                    s.QUAKEML_XML
+                FROM TEMP_HISTORICAL_QUAKEML_STAGE s
+                WHERE NOT EXISTS (
+                    SELECT 1
+                    FROM {quakeml_table} q
+                    WHERE q.EARTHQUAKE_ID = s.EARTHQUAKE_ID
+                )
+            """)
+
+            cursor.execute("COMMIT")
+
+        except Exception:
+            cursor.execute("ROLLBACK")
+            raise
+
+    print(f"Bulk processed {len(records)} earthquakes")
 
 def main():
     connection = connect_to_snowflake()
