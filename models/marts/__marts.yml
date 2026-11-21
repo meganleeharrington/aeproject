@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: mart_plant_earthquake_events
+    description: "One row per plant-earthquake combo within 50 km"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_earthquake_events')
+                field: earthquake_id
+      - name: plant_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_plant')
+                field: plant_id
+      - name: distance_km
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: ">= 0 AND distance_km <= 50"
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - plant_id
