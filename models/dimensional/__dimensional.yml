@@ -59,7 +59,13 @@ models:
         data_tests:
           - not_null
           - unique
-  
+      - name: magnitude_type
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_magnitude_type')
+                field: type
+
   - name: fct_station_magnitudes
     description: "One row per station magnitude per earthquake"
     columns:
@@ -75,6 +81,12 @@ models:
               arguments:
                 to: ref('dim_station')
                 field: station_key
+      - name: magnitude_type
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_magnitude_type')
+                field: type
     data_tests:
         - dbt_utils.unique_combination_of_columns:
             arguments:
@@ -82,10 +94,19 @@ models:
                 - earthquake_id
                 - station_magnitude_id
 
+      
   - name: dim_plant
     description: "One row per power plant"
     columns:
       - name: plant_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_magnitude_type
+    description: "One row per magnitude type"
+    columns:
+      - name: type
         data_tests:
           - not_null
           - unique
