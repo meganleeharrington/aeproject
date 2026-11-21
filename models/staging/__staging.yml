@@ -43,3 +43,13 @@ models:
       - name: generator_id
         data_tests:
           - not_null
+
+  - name: stg_station_details
+    description: "One row per network-station"
+    columns:
+      - name: network
+        data_tests:
+          - not_null
+      - name: station
+        data_tests:
+          - not_null
