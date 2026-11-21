@@ -231,7 +231,7 @@ def process_batch(connection, batch_start, batch_end):
         details = fetch_earthquake_details(earthquake)
         quakeml = fetch_quakeml(details)
 
-        time.sleep(1)
+        time.sleep(0.2)
 
         api_retrieval_time += time.perf_counter() - api_start
 
