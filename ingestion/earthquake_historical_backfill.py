@@ -11,8 +11,8 @@ def create_retry_session():
     session = requests.Session()
 
     retry_strategy = Retry(
-        total=5,
-        backoff_factor=2,
+        total=7,
+        backoff_factor=3,
         status_forcelist=[429, 500, 502, 503, 504],
         allowed_methods=["GET"],
         respect_retry_after_header=True
@@ -230,6 +230,8 @@ def process_batch(connection, batch_start, batch_end):
 
         details = fetch_earthquake_details(earthquake)
         quakeml = fetch_quakeml(details)
+
+        time.sleep(1)
 
         api_retrieval_time += time.perf_counter() - api_start
 
