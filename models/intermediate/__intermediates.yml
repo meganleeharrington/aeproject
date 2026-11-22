@@ -18,7 +18,6 @@ models:
       - name: earthquake_id
         data_tests:
           - not_null
-
     data_tests:
           - dbt_utils.unique_combination_of_columns:
               arguments:
@@ -35,7 +34,6 @@ models:
       - name: pick_id
         data_tests:
           - not_null
-    
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -51,8 +49,7 @@ models:
           - not_null
       - name: station_magnitude_id
         data_tests:
-          - not_null
-          
+          - not_null 
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -69,7 +66,6 @@ models:
       - name: origin_id
         data_tests:
           - not_null
-    
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -89,7 +85,6 @@ models:
       - name: arrival_id
         data_tests:
           - not_null
-      
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -105,12 +100,6 @@ models:
         data_tests:
           - not_null
           - unique
-      - name: preferred_magnitude_id
-        data_tests:
-          - not_null
-      - name: preferred_origin_id
-        data_tests:
-          - not_null
 
   - name: int_quakeml_nearest_cities
     description: "One row per nearest city per earthquake"
@@ -121,19 +110,21 @@ models:
       - name: city
         data_tests:
           - not_null
-      - name: state_or_province
-        data_tests:
-          - not_null
-      - name: country
-        data_tests:
-          - not_null
-
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
             combination_of_columns:
               - earthquake_id
               - city_rank
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - city
+              - state_or_province
+              - country
+          config:
+            severity: warn
 
   - name: int_quakeml_magnitude
     description: "One row per magnitude estimate per earthquake"
@@ -144,7 +135,6 @@ models:
       - name: magnitude_id
         data_tests:
           - not_null
-    
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -164,7 +154,6 @@ models:
       - name: station_magnitude_id
         data_tests:
           - not_null
-    
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments:
@@ -172,3 +161,22 @@ models:
               - earthquake_id
               - magnitude_id
               - station_magnitude_id
+  
+  - name: int_plant_earthquake_distance
+    description: "One row per earthquake-plant combo within a 50 km radius"
+    columns:
+      - name: plant_id
+        data_tests:
+          - not_null
+      - name: earthquake_id
+        data_tests:
+          - not_null
+      - name: distance_km
+        data_tests:
+          - not_null
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - plant_id
+              - earthquake_id

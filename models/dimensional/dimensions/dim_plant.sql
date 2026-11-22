@@ -5,7 +5,7 @@ select
     p.utility_name,
     p.city,
     p.state,
-    p.zip::number as zip,
+    p.zip,
     p.county,
     p.latitude::float as latitude,
     p.longitude::float as longitude,

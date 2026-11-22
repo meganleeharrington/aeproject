@@ -4,7 +4,7 @@ select
     get(a.value, '@publicID')::varchar as arrival_id,
     get(xmlget(a.value, 'pickID'), '$')::varchar as pick_id,
     get(xmlget(a.value, 'phase'), '$')::varchar as phase,
-    get(xmlget(a.value, 'azimuth'), '$')::varchar as azimuth,
+    get(xmlget(a.value, 'azimuth'), '$')::float as azimuth,
     get(xmlget(a.value, 'distance'), '$')::float as distance,
     get(xmlget(a.value, 'timeResidual'), '$')::float as time_residual,
     get(xmlget(a.value, 'timeWeight'), '$')::float as time_weight,
@@ -12,7 +12,7 @@ select
     get(xmlget(xmlget(a.value, 'creationInfo'), 'agencyURI'), '$')::varchar as agency_uri,
     get(xmlget(xmlget(a.value, 'creationInfo'), 'author'), '$')::varchar as author,
     try_to_timestamp_tz(get(xmlget(xmlget(a.value, 'creationInfo'), 'creationTime'), '$')::varchar) as creation_time
-from int_quakeml_parsed,
+from {{ ref('int_quakeml_parsed') }},
 lateral flatten (
     input => get(xmlget(xmlget(parsed_xml, 'eventParameters'), 'event'), '$')
 ) o,

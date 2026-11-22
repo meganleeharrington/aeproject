@@ -9,17 +9,6 @@ models:
           - not_null
           - unique
   
-  - name: stg_county_boundaries
-    description: "One row per county"
-    columns:
-      - name: county_fips
-        data_tests:
-          - unique
-          - not_null
-      - name: county_geometry
-        data_tests:
-          - not_null
-
   - name: stg_eia_plants
     description: "One row per plant from EIA-860 2025"
     columns:
@@ -43,6 +32,12 @@ models:
       - name: generator_id
         data_tests:
           - not_null
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - plant_code
+              - generator_id
 
   - name: stg_station_details
     description: "One row per network-station"
@@ -51,5 +46,25 @@ models:
         data_tests:
           - not_null
       - name: station
+        data_tests:
+          - not_null
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - network
+              - station
+
+  - name: stg_earthquake_geographic_enrichment
+    description: "One row per earthquake"
+    columns:
+      - name: earthquake_id
+        data_tests:
+          - not_null
+          - unique
+      - name: flinn_engdahl_region_number
+        data_tests:
+          - not_null
+      - name: flinn_engdahl_region_name
         data_tests:
           - not_null

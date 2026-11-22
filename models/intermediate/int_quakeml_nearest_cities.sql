@@ -27,4 +27,3 @@ from t,
 lateral flatten (
     input => nearest_cities_description
 ) f
-order by earthquake_id, city_rank;

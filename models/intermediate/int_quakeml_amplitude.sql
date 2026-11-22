@@ -1,4 +1,4 @@
-select
+select distinct
     earthquake_id,
     get(f.value, '@publicID')::varchar as amplitude_id,
     get(xmlget(xmlget(f.value,'genericAmplitude'), 'value'), '$')::float as generic_amplitude,
