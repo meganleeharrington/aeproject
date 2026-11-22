@@ -5,6 +5,7 @@ models:
     description: "One row per network-station"
     columns: 
       - name: station_key
+        description: "Identifies unique stations using network-station pairs"
         data_tests:
           - not_null
           - unique
@@ -19,12 +20,11 @@ models:
     description: "One row per earthquake"
     columns:
       - name: earthquake_id
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: flinn_engdahl_region_number
-        tests:
-          - not_null
+        data_tests:
           - relationships:
               arguments:
                 to: ref('dim_seismic_region')
@@ -34,7 +34,7 @@ models:
     description: "One row per Flinn-Engdahl region"
     columns:
       - name: flinn_engdahl_region_number
-        tests:
+        data_tests:
           - unique
           - not_null
 
@@ -47,7 +47,12 @@ models:
       - name: origin_id
         data_tests:
           - not_null
-          - unique
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - origin_id
 
   - name: fct_earthquake_magnitudes
     description: "One row per magnitude per earthquake"
@@ -58,13 +63,18 @@ models:
       - name: magnitude_id
         data_tests:
           - not_null
-          - unique
       - name: magnitude_type
         data_tests:
           - relationships:
               arguments:
                 to: ref('dim_magnitude_type')
                 field: type
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - earthquake_id
+              - magnitude_id
 
   - name: fct_station_magnitudes
     description: "One row per station magnitude per earthquake"

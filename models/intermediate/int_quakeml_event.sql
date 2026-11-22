@@ -13,7 +13,7 @@ lateral flatten (
     input => get(xmlget(parsed_xml, 'eventParameters'), '$')
 ) f,
 lateral flatten (
-        input => get(f.value, '$')
+        input => get(f.value, '$'), outer => true
     ) c
 where get(f.value, '@')::varchar = 'event'
-group by all;
+group by all
